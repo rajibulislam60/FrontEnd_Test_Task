@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Cart</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <main>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="product">
+        <img
+          src="./images/product-gallery.png"
+          alt="SmartWatch"
+          class="product-image"
+        />
 
+        <div class="product-details">
+          <h1 id="product-title" class="title"></h1>
+          <h3 id="product-price" class="price"></h3>
+          <p id="product-descreption" class="pera"></p>
+          <div>
+            <h4 class="type">Type: <span id="type-name"></span></h4>
+            <h3 class="watch">Watch: <span id="watch-name"></span></h3>
+          </div>
+          <h2 class="color">Brand Color</h2>
+          <div class="color_gap">
+            <button class="btnC1"></button>
+            <button class="btnC2"></button>
+            <button class="btnC3"></button>
+            <button class="btnC4"></button>
+          </div>
+          <h2 class="wrist_size">Wrist Size</h2>
+          <div class="size">
+            <button>S <span id="w-price1"></span></button>
+            <button>M <span id="w-price2"></span></button>
+            <button>L <span id="w-price3"></span></button>
+            <button>XL <span id="w-price4"></span></button>
+          </div>
+          <div class="cartBtn_area">
+            <div class="addItem">
+              <button aria-label="Decrease Quantity">-</button>
+              <p class="p_count"><span item="0">0</span></p>
+              <button aria-label="Increase Quantity">+</button>
+            </div>
+            <button class="addBtn">Add To Cart</button>
+          </div>
+        </div>
+      </section>
+      <button id="checkout-btn">
+        Checkout <span id="cart-count"> 0</span>
+      </button>
+
+      <!-- Cart Box (Initially Hidden) -->
+      <div id="cart-box" class="cart-box">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button id="close-cart">Close</button>
+        </div>
+        <div class="cart-body">
+          <p id="cart-details">Cart is empty.</p>
+        </div>
+      </div>
     </main>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
