@@ -277,7 +277,7 @@ body {
 
 /* Cart Box Style */
 .cart-box {
-  display: none;
+ display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -287,7 +287,7 @@ body {
   border-left: 2px solid #ccc;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  z-index: 1000;
+ 
 }
 
 .cart-header {

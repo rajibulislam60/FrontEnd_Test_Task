@@ -47,4 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".addItem p span").textContent = cartCount;
       document.getElementById("cart-count").textContent = cartCount;
     });
+
+  // Cart button for show add item
+
+  document.getElementById("checkout-btn").addEventListener("click", () => {
+    document.getElementById("cart-box").style.display = "block";
+  });
+  document.getElementById("close-cart").addEventListener("click", () => {
+    document.getElementById("cart-box").style.display = "none";
+  });
 });
