@@ -10,55 +10,64 @@
     <main class="container">
       <section class="product">
         <img
-          src="./images/product-gallery.png"
+          src="./images/product-red.png"
           alt="SmartWatch"
           class="product-image"
+          id="product-image"
         />
 
         <div class="product-details">
-          <h1 id="product-title" class="title"></h1>
-          <h3 id="product-price" class="price"></h3>
-          <p id="product-descreption" class="pera"></p>
+          <h1 id="product-title" class="title">SmartWatch</h1>
+          <h3 id="product-price" class="price">$299.99</h3>
+          <p id="product-descreption" class="pera">A sleek and modern smartwatch with various features.</p>
           <div>
-            <h4 class="type">Type: <span id="type-name"></span></h4>
-            <h3 class="watch">Watch: <span id="watch-name"></span></h3>
+            <h4 class="type">Type: <span id="type-name">Fitness</span></h4>
+            <h3 class="watch">Watch: <span id="watch-name">Sport</span></h3>
           </div>
+
           <h2 class="color">Brand Color</h2>
           <div class="color_gap">
-            <button class="btnC1"></button>
-            <button class="btnC2"></button>
-            <button class="btnC3"></button>
-            <button class="btnC4"></button>
+            <button class="btnC1" data-color="red" style="background-color: red;"></button>
+            <button class="btnC2" data-color="blue" style="background-color: blue;"></button>
+            <button class="btnC3" data-color="green" style="background-color: green;"></button>
+            <button class="btnC4" data-color="black" style="background-color: black;"></button>
           </div>
+
           <h2 class="wrist_size">Wrist Size</h2>
           <div class="size">
-            <button>S <span id="w-price1"></span></button>
-            <button>M <span id="w-price2"></span></button>
-            <button>L <span id="w-price3"></span></button>
-            <button>XL <span id="w-price4"></span></button>
+            <button data-size="S">S <span id="w-price1"></span></button>
+            <button data-size="M">M <span id="w-price2"></span></button>
+            <button data-size="L">L <span id="w-price3"></span></button>
+            <button data-size="XL">XL <span id="w-price4"></span></button>
           </div>
+
           <div class="cartBtn_area">
             <div class="addItem">
               <button aria-label="Decrease Quantity">-</button>
-              <p class="p_count"><span item="0">0</span></p>
+              <p class="p_count"><span>0</span></p>
               <button aria-label="Increase Quantity">+</button>
             </div>
             <button class="addBtn">Add To Cart</button>
           </div>
         </div>
       </section>
+
+      <!-- Checkout Button -->
       <button id="checkout-btn">
         Checkout <span id="cart-count"> 0</span>
       </button>
 
-      <!-- Cart Box (Initially Hidden) -->
-      <div id="cart-box" class="cart-box">
+      <!-- Cart Box -->
+      <div id="cart-box" class="cart-box" style="display:none;">
         <div class="cart-header">
           <h2>Your Cart</h2>
           <button id="close-cart">Close</button>
         </div>
         <div class="cart-body">
-          <p id="cart-details">Cart is empty.</p>
+          <div id="cart-items-list"></div>
+          <div id="cart-total">
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+          </div>
         </div>
       </div>
     </main>
